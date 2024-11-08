@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dolce Vita Bakery</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+     <!-- Topbar Start -->
+<div class="container-fluid bg-primary py-3 d-none d-md-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-white pr-3" href="">FAQs</a>
+                    <span class="text-white">|</span>
+                    <a class="text-white px-3" href="">Help</a>
+                    <span class="text-white">|</span>
+                    <a class="text-white pl-3" href="">Support</a>
+                </div>
+            </div>
+            <div class="col-md-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-white px-3" href="">
+                        <i class="fab fa-"></i>
+                    </a>
+                    <a class="text-white px-3" href="">
+                        <i class="fab fa-"></i>
+                    </a>
+                    <a class="text-white px-3" href="">
+                        <i class="fab fa-"></i>
+                    </a>
+                    <a class="text-white px-3" href="">
+                        <i class="fab fa-"></i>
+                    </a>
+                    <a class="text-white px-3" href="#" data-toggle="modal" data-target="#registerModal">
+                        <i class="fas fa-user-circle fa-2x"></i>
+                    </a>
+                    <a class="text-white pl-3" href="#" data-toggle="modal" data-target="#cartModal">
+                        <i class="fas fa-shopping-cart fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+<!-- Sign In & Sign Up Modal Start -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Sign In / Sign Up</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Tabs for Sign In and Sign Up -->
+                <ul class="nav nav-tabs mb-4">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="signin-tab" data-toggle="tab" href="#signin" role="tab">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="signup-tab" data-toggle="tab" href="#signup" role="tab">Sign Up</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <!-- Sign In Form -->
+                    <div class="tab-pane fade show active" id="signin" role="tabpanel">
+                        <form>
+                            <div class="form-group">
+                                <label for="signinEmail">Email</label>
+                                <input type="email" class="form-control" id="signinEmail" placeholder="Enter email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="signinUsername">Username</label>
+                                <input type="text" class="form-control" id="signinUsername" placeholder="Enter username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="signinPassword">Password</label>
+                                <input type="password" class="form-control" id="signinPassword" placeholder="Enter password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Sign In</button>
+                        </form>
+                    </div>
+                    <!-- Sign Up Form -->
+                    <div class="tab-pane fade" id="signup" role="tabpanel">
+                        <form>
+                            <div class="form-group">
+                                <label for="signupName">Nama Lengkap</label>
+                                <input type="text" class="form-control" id="signupName" placeholder="Enter full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="signupEmail">Email</label>
+                                <input type="email" class="form-control" id="signupEmail" placeholder="Enter email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="signupPassword">Password</label>
+                                <input type="password" class="form-control" id="signupPassword" placeholder="Enter password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="signupPhone">Nomor Telepon</label>
+                                <input type="text" class="form-control" id="signupPhone" placeholder="Enter phone number" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Sign In & Sign Up Modal End -->
+
+<!-- Register Modal Start -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Sign Up</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" placeholder="Enter your username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Register Modal End -->
+
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
+                <a href="index.html" class="navbar-brand d-block d-lg-none">
+                    <h1 class="m-0 display-4 text-primary"><span class="text-secondary">D</span>ovi's</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="product.html" class="nav-item nav-link active">Produk</a>
+                    </div>
+                    <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
+                        <h1 class="m-0 display-4 text-primary"><span class="text-secondary">D</span>ovi's</h1>
+                    </a>
+                    <div class="navbar-nav mr-auto py-0">
+                        <a href="service.html" class="nav-item nav-link">Layanan</a>
+                        <a href="gallery.html" class="nav-item nav-link">Pemesanan</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid page-header" style="margin-bottom: 90px;">
+        <div class="container text-center py-5">
+            <h1 class="text-white display-3 mt-lg-5">"Temukan Roti Favoritmu"</h1>
+            <div class="d-inline-flex align-items-center text-white">
+                <p class="m-0"><a class="text-white" href="">Dari klasik hingga inovatif, pilihan kami pasti memanjakan selera Anda</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Products Start -->
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                    <h1 class="section-title position-relative text-center mb-5">Our Menu</h1>
+                </div>
+                <div class="row justify-content-center">
+                    </div>
+                </div>
+
+    <!-- Portfolio Start -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <ul class="list-inline mb-4 pb-2" id="portfolio-flters">
+                        <li class="btn btn-sm btn-outline-primary m-1 active"  data-filter="*">Pastry</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4 pb-2">
+            <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                    <h4 class="font-weight-bold text-white mb-0">12K</h4>
+                </div>
+                <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                    <img class="rounded-circle w-100 h-100" src="img/Croisant Chocolate.jpg" style="object-fit: cover;">
+                </div>
+                <h5 class="font-weight-bold mb-4">Croisant Chocolate</h5>
+                <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 pb-2">
+            <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                    <h4 class="font-weight-bold text-white mb-0">12K</h4>
+                </div>
+                <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                    <img class="rounded-circle w-100 h-100" src="img/croissant vanilla.jpg" style="object-fit: cover;">
+                </div>
+                <h5 class="font-weight-bold mb-4">Croissant Vanilla</h5>
+                <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 pb-2">
+            <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                    <h4 class="font-weight-bold text-white mb-0">10K</h4>
+                </div>
+                <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                    <img class="rounded-circle w-100 h-100" src="img/pistachio Éclair.jpg" style="object-fit: cover;">
+                </div>
+                <h5 class="font-weight-bold mb-4">Éclair Pistachio</h5>
+                <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 pb-2">
+            <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                    <h4 class="font-weight-bold text-white mb-0">15K</h4>
+                </div>
+                <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                    <img class="rounded-circle w-100 h-100" src="img/danish strawberry.jpg" style="object-fit: cover;">
+                </div>
+                <h5 class="font-weight-bold mb-4">Danish Strawberry</h5>
+                <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 pb-2">
+            <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                    <h4 class="font-weight-bold text-white mb-0">13K</h4>
+                </div>
+                <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                    <img class="rounded-circle w-100 h-100" src="img/Hazelnut Tart.jpg" style="object-fit: cover;">
+                </div>
+                <h5 class="font-weight-bold mb-4">Hazelnut Tart</h5>
+                <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 pb-2">
+            <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                    <h4 class="font-weight-bold text-white mb-0">14K</h4>
+                </div>
+                <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                    <img class="rounded-circle w-100 h-100" src="img/Cream Cheese Danish.jpg" style="object-fit: cover;">
+                </div>
+                <h5 class="font-weight-bold mb-4">Cheese Danish</h5>
+                <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 pb-2">
+            <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                    <h4 class="font-weight-bold text-white mb-0">11K</h4>
+                </div>
+                <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                    <img class="rounded-circle w-100 h-100" src="img/raspberry eclair.jpg" style="object-fit: cover;">
+                </div>
+                <h5 class="font-weight-bold mb-4">Éclair Raspberry</h5>
+                <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 pb-2">
+            <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                    <h4 class="font-weight-bold text-white mb-0">13K</h4>
+                </div>
+                <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                    <img class="rounded-circle w-100 h-100" src="img/Tart Lemon.jpg" style="object-fit: cover;">
+                </div>
+                <h5 class="font-weight-bold mb-4">Tart Lemon</h5>
+                <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+            </div>
+        </div>
+    </div>
+    </div>
+        </div>
+    </div>
+    </div>
+    <!-- Products End -->
+
+
+   
+
+    <!-- Portfolio Start -->
+        <div class="row justify-content-center">
+            
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <ul class="list-inline mb-4 pb-2" id="portfolio-flters">
+                    <li class="btn btn-sm btn-outline-primary m-1 active" data-filter=".first">Cookie</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<div class="row">
+    <div class="col-lg-3 col-md-6 mb-4 pb-2">
+        <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                <h4 class="font-weight-bold text-white mb-0">13K</h4>
+            </div>
+            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                <img class="rounded-circle w-100 h-100" src="img/Lotus Cookies.jpg" style="object-fit: cover;">
+            </div>
+            <h5 class="font-weight-bold mb-4">Lotus Cookies</h5>
+            <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 mb-4 pb-2">
+        <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                <h4 class="font-weight-bold text-white mb-0">12K</h4>
+            </div>
+            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                <img class="rounded-circle w-100 h-100" src="img/Cookies Red velvet.jpg" style="object-fit: cover;">
+            </div>
+            <h5 class="font-weight-bold mb-4">Cookies Red velvet</h5>
+            <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 mb-4 pb-2">
+        <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                <h4 class="font-weight-bold text-white mb-0">14K</h4>
+            </div>
+            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                <img class="rounded-circle w-100 h-100" src="img/Cookies Chocolate.jpg" style="object-fit: cover;">
+            </div>
+            <h5 class="font-weight-bold mb-4">Cookies Chocolate</h5>
+            <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 mb-4 pb-2">
+        <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                <h4 class="font-weight-bold text-white mb-0">11K</h4>
+            </div>
+            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                <img class="rounded-circle w-100 h-100" src="img/Cookies Matcha.jpg" style="object-fit: cover;">
+            </div>
+            <h5 class="font-weight-bold mb-4">Cookies Matcha</h5>
+            <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 mb-4 pb-2">
+        <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                <h4 class="font-weight-bold text-white mb-0">13K</h4>
+            </div>
+            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                <img class="rounded-circle w-100 h-100" src="img/Cookies Oreo.jpg" style="object-fit: cover;">
+            </div>
+            <h5 class="font-weight-bold mb-4">Cookies Oreo</h5>
+            <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 mb-4 pb-2">
+        <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                <h4 class="font-weight-bold text-white mb-0">14K</h4>
+            </div>
+            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                <img class="rounded-circle w-100 h-100" src="img/Peanut Cookies.jpg" style="object-fit: cover;">
+            </div>
+            <h5 class="font-weight-bold mb-4">Cookies Peanut</h5>
+            <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 mb-4 pb-2">
+        <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                <h4 class="font-weight-bold text-white mb-0">12K</h4>
+            </div>
+            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                <img class="rounded-circle w-100 h-100" src="img/Cookies Sprinkle.jpg" style="object-fit: cover;">
+            </div>
+            <h5 class="font-weight-bold mb-4">Cookies Sprinkle</h5>
+            <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 mb-4 pb-2">
+        <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                <h4 class="font-weight-bold text-white mb-0">12,5K</h4>
+            </div>
+            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                <img class="rounded-circle w-100 h-100" src="img/Cookies Cornflake.jpg" style="object-fit: cover;">
+            </div>
+            <h5 class="font-weight-bold mb-4">Cookies Cornflake</h5>
+            <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+        </div>
+    </div>
+</div>
+</div>
+    </div>
+</div>
+</div>
+<!-- Products End -->
+
+    <!-- Portfolio Start -->
+     <div class="container py-5">
+        <div class="row justify-content-center">
+            
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <ul class="list-inline mb-4 pb-2" id="portfolio-flters">
+                    <li class="btn btn-sm btn-outline-primary m-1 active" data-filter=".second">Donut</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                    <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                        <h4 class="font-weight-bold text-white mb-0">6K</h4>
+                    </div>
+                    <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                        <img class="rounded-circle w-100 h-100" src="img/Classic Donut.jpg" style="object-fit: cover;">
+                    </div>
+                    <h5 class="font-weight-bold mb-4">Classic Donut</h5>
+                    <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                    <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                        <h4 class="font-weight-bold text-white mb-0">7K</h4>
+                    </div>
+                    <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                        <img class="rounded-circle w-100 h-100" src="img/Lotus Donut.jpg" style="object-fit: cover;">
+                    </div>
+                    <h5 class="font-weight-bold mb-4">Lotus Donut</h5>
+                    <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                    <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                        <h4 class="font-weight-bold text-white mb-0">6K</h4>
+                    </div>
+                    <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                        <img class="rounded-circle w-100 h-100" src="img/Matcha Donut.jpg" style="object-fit: cover;">
+                    </div>
+                    <h5 class="font-weight-bold mb-4">Matcha Donut </h5>
+                    <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                    <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                        <h4 class="font-weight-bold text-white mb-0">10K</h4>
+                    </div>
+                    <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                        <img class="rounded-circle w-100 h-100" src="img/bomboloni strawberry.jpg" style="object-fit: cover;">
+                    </div>
+                    <h5 class="font-weight-bold mb-4">Strawberry Bomboloni</h5>
+                    <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                    <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                        <h4 class="font-weight-bold text-white mb-0">11K</h4>
+                    </div>
+                    <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                        <img class="rounded-circle w-100 h-100" src="img/Peanut Bomboloni.jpg" style="object-fit: cover;">
+                    </div>
+                    <h5 class="font-weight-bold mb-4">Peanut Bomboloni</h5>
+                    <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                    <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                        <h4 class="font-weight-bold text-white mb-0">7K</h4>
+                    </div>
+                    <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                        <img class="rounded-circle w-100 h-100" src="img/Sprinkle Donut.jpg" style="object-fit: cover;">
+                    </div>
+                    <h5 class="font-weight-bold mb-4">Sprinkle Donut</h5>
+                    <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                    <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                        <h4 class="font-weight-bold text-white mb-0">9K</h4>
+                    </div>
+                    <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                        <img class="rounded-circle w-100 h-100" src="img/Oreo Donut.jpg" style="object-fit: cover;">
+                    </div>
+                    <h5 class="font-weight-bold mb-4">Oreo Donut</h5>
+                    <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                    <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                        <h4 class="font-weight-bold text-white mb-0">8K</h4>
+                    </div>
+                    <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                        <img class="rounded-circle w-100 h-100" src="img/Avocado Donut.jpg" style="object-fit: cover;">
+                    </div>
+                    <h5 class="font-weight-bold mb-4">Avocado Donut</h5>
+                    <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio End -->
+            
+    <!-- Portfolio Start -->
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <ul class="list-inline mb-4 pb-2" id="portfolio-flters">
+                    <li class="btn btn-sm btn-outline-primary m-1 active" data-filter=".third">Cake</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                    <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                        <h4 class="font-weight-bold text-white mb-0">12K</h4>
+                    </div>
+                    <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                        <img class="rounded-circle w-100 h-100" src="img/Cheese Cake.jpg" style="object-fit: cover;">
+                    </div>
+                    <h5 class="font-weight-bold mb-4">Cheese Cake</h5>
+                    <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                    <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                        <h4 class="font-weight-bold text-white mb-0">14K</h4>
+                    </div>
+                    <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                        <img class="rounded-circle w-100 h-100" src="img/Chocolate cake.jpg" style="object-fit: cover;">
+                    </div>
+                    <h5 class="font-weight-bold mb-4">Chocolate Cake</h5>
+                    <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                    <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                        <h4 class="font-weight-bold text-white mb-0">90K</h4>
+                    </div>
+                    <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                        <img class="rounded-circle w-100 h-100" src="img/Lapis Legit.jpg" style="object-fit: cover;">
+                    </div>
+                    <h5 class="font-weight-bold mb-4">Lapis Legit</h5>
+                    <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                    <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                        <h4 class="font-weight-bold text-white mb-0">45K</h4>
+                    </div>
+                    <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                        <img class="rounded-circle w-100 h-100" src="img/Bolu Gulung.jpg" style="object-fit: cover;">
+                    </div>
+                    <h5 class="font-weight-bold mb-4">Bolu Gulung</h5>
+                    <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                    <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                        <h4 class="font-weight-bold text-white mb-0">7K</h4>
+                    </div>
+                    <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                        <img class="rounded-circle w-100 h-100" src="img/Rainbow Cake.jpg" style="object-fit: cover;">
+                    </div>
+                    <h5 class="font-weight-bold mb-4">Rainbow Cake</h5>
+                    <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                    <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                        <h4 class="font-weight-bold text-white mb-0">7K</h4>
+                    </div>
+                    <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                        <img class="rounded-circle w-100 h-100" src="img/Crepe Matcha.jpg" style="object-fit: cover;">
+                    </div>
+                    <h5 class="font-weight-bold mb-4">Crepe Matcha</h5>
+                    <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                    <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                        <h4 class="font-weight-bold text-white mb-0">8K</h4>
+                    </div>
+                    <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                        <img class="rounded-circle w-100 h-100" src="img/Strawberry Crepe.jpg" style="object-fit: cover;">
+                    </div>
+                    <h5 class="font-weight-bold mb-4">Strawberry Crepe</h5>
+                    <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 pb-2">
+                <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                    <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                        <h4 class="font-weight-bold text-white mb-0">8K</h4>
+                    </div>
+                    <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                        <img class="rounded-circle w-100 h-100" src="img/Caramel Crepe.jpg" style="object-fit: cover;">
+                    </div>
+                    <h5 class="font-weight-bold mb-4">Caramel Crepe</h5>
+                    <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+    <!-- Products End -->
+
+     <!-- Footer Start -->
+     <div class="container-fluid footer bg-light py-5" style="margin-top: 90px;">
+        <div class="container text-center py-5">
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <a href="index.html" class="navbar-brand m-0">
+                        <h1 class="m-0 mt-n2 display-4 text-primary"><span class="text-secondary">D</span>ovi's</h1>
+                    </a>
+                </div>
+                <div class="col-12 mb-4">
+                   <!-- Updated social media links -->
+                <a class="btn btn-outline-secondary btn-social mr-2" href="https://twitter.com" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="btn btn-outline-secondary btn-social mr-2" href="https://facebook.com" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="btn btn-outline-secondary btn-social mr-2" href="https://linkedin.com" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="btn btn-outline-secondary btn-social" href="https://instagram.com" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <div class="col-12 mt-2 mb-4">
+                </div>
+                <div class="col-12">
+                    <p class="m-0">&copy; <a href="#"></a>. All Rights Reserved. Designed by <a href="https://htmlcodex.com">Luthfiah Nur Faizah-202251185</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+              
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-secondary px-2 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
